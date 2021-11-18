@@ -1,0 +1,59 @@
+.column-MessageListSidebar {
+  border: none;
+  padding: 10px;
+}
+
+.sidebar-section {
+  margin: 0;
+  background: @background-primary-accent;
+  border-radius: @border-radius;
+  border: 0px;
+
+  .btn {
+    box-shadow: 0 0 2px @background-lighten  !important;
+  }
+}
+
+.sidebar-participant-picker {
+  background: @background-primary;
+  padding: 0px 0px 20px 0px;
+
+  select {
+    text-align-last: center;
+  }
+}
+
+.participant-profile .contact-profile-photo,
+.company-profile .contact-profile-photo {
+  top: -25px;
+}
+
+.contact-profile-photo {
+
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  box-shadow: none;
+  background: none;
+
+  .profile-photo {
+    height: 50px;
+    width: 50px;
+    border-radius: @border-radius;
+
+    img,
+    .default-profile-image {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+.related-threads {
+  border-top: none;
+
+  .related-thread:hover {
+    background: initial;
+    color: @text-color-link-hover;
+  }
+}

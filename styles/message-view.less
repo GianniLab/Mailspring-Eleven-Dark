@@ -1,0 +1,106 @@
+.column-MessageList {
+  padding: 10px;
+}
+
+#message-list {
+  overflow: hidden;
+  background: @background-primary;
+
+  .message-subject-wrap {
+    margin: 0 10px 10px;
+    line-height: inherit;
+    padding: 10px 12px 2px;
+
+    .message-subject {
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .message-item-wrap {
+    padding-bottom: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+  }
+
+  .message-item-wrap .message-item-white-wrap {
+    box-shadow: 0 0 0.5px rgba(255, 255, 255, 0.28),
+      0 1px 1.5px rgba(255, 255, 255, 0.08);
+    background: @background-primary-accent;
+
+    .composer-inner-wrap,
+    .composer-action-bar-wrap {
+      background: @background-primary-accent  !important;
+    }
+
+  }
+
+  .message-iframe-container iframe #inbox-html-wrapper {
+    font-weight: 300 !important;
+  }
+
+  .message-item-wrap.collapsed .message-item-white-wrap {
+    background: @background-primary-unfocus;
+  }
+
+  .messages-wrap .scroll-region-content-inner {
+    padding: 0;
+    border: 0px solid @border-color-primary;
+    background: @background-primary-accent;
+    border-radius: @border-radius;
+  }
+
+  .message-header {
+    padding-left: 10px;
+  }
+
+  .header-toggle-control {
+    left: -3px;
+  }
+
+  .footer-reply-area-wrap {
+    background: @background-dark;
+    border: none;
+    margin: 0;
+
+    img.content-mask {
+      float: right;
+    }
+  }
+
+  .send-reminders-header {
+    background: rgba(90, 49, 225, 0.35);
+    border-radius: @border-radius;
+    margin: 0 10px 10px;
+    border-bottom: 0;
+  }
+
+}
+
+.nylas-attachment-item {
+  .file-action-icon {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .file-info-wrap {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.button-dropdown {
+
+  .primary-item {
+    box-shadow: none !important;
+    // border: 1px solid @border-color-primary;
+    left: 0 !important;
+  }
+
+  .secondary-picker {
+    box-shadow: none !important;
+    // border: 1px solid @border-color-primary;
+    // border-left: 0 !important;
+    right: 0 !important;
+  }
+}

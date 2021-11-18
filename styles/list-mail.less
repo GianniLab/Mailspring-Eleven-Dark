@@ -1,0 +1,113 @@
+.column-ThreadList {
+  padding: 10px;
+}
+
+.list-container {
+
+  .list-rows {
+    background: none;
+  }
+
+  .list-item:hover {
+    background: @background-dark-blur  !important;
+  }
+
+  .list-item.focused {
+    color: inherit;
+    background: @background-lighten;
+
+    .participants-wrapper {
+
+      color: @accent-primary-unfocus;
+    }
+  }
+}
+
+body.is-blurred .list-container .list-item.focused {
+  background: @background-primary-unfocus;
+}
+
+.thread-list .scroll-region {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.thread-list .list-item,
+.draft-list .list-item {
+  background: @background-primary-accent  !important;
+  border-bottom: 1px solid @border-color-primary;
+  padding: 7px 0;
+  max-height: 80px;
+  border-radius: @border-radius;
+}
+
+.thread-list,
+.draft-list {
+  .unread:not(.focused):not(.selected):not(.next-is-selected) {
+    border-bottom: 1px solid @border-color-primary;
+  }
+
+  .thread-icon.thread-icon-unread,
+  .thread-icon.thread-icon-unread {
+    visibility: hidden;
+  }
+
+  .focused .thread-icon,
+  .focused .draft-icon,
+  .focused .mail-important-icon {
+    filter: none;
+  }
+}
+
+.thread-list-narrow {
+
+  .subject,
+  .snippet-and-labels .snippet {
+    font-size: 12.3px;
+    line-height: normal;
+  }
+}
+
+.thread-list-wide {
+  .list-item {
+    margin-bottom: 3px;
+    border-radius: @radius;
+  }
+}
+
+.thread-list-wide .scroll-region {
+  border-radius: @border-radius;
+}
+
+.thread-list-wide {
+
+  .list-item:hover .list-column-HoverActions {
+    width: auto !important;
+    height: inherit;
+  }
+
+  .list-item:hover .list-column-HoverActions .inner {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+    left: inherit;
+  }
+
+  .list-column-HoverActions .action {
+    box-shadow: none;
+  }
+
+  // .thread-injected-quick-actions div,
+  // .thread-injected-quick-actions button {
+  //   margin: 0 auto !important;
+  // }
+}
+
+.thread-list.handler-split .list-item.selected {
+  color: inherit;
+  border-left: 4px solid @accent-blue;
+}
+
+.list-container .list-item.next-is-selected {
+  border-bottom-color: @border-color-primary;
+}

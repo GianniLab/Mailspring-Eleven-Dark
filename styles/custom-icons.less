@@ -1,0 +1,240 @@
+@baseurl: "../../../../../../Roaming/Mailspring/packages/11-light/img";
+
+// @baseurl: "~/Library/Application Support/Mailspring/packages/11/img";
+
+
+img[ alt="icon-preferences-general.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-settings.svg") !important;
+}
+
+img[ alt="icon-preferences-accounts.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-email-sign.png") !important;
+}
+
+img[ alt="icon-preferences-subscription.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-customer.png") !important;
+}
+
+img[ alt="icon-preferences-appearance.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-personalization.png") !important;
+}
+
+img[ alt="icon-preferences-shortcuts.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-keyboard.png") !important;
+}
+
+img[ alt="icon-preferences-mail-rules.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-mail-rules.png") !important;
+}
+
+img[ alt="icon-preferences-folders.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-inbox-settings.png") !important;
+}
+
+img[ alt="icon-preferences-signatures.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-autograph.png") !important;
+}
+
+img[ alt="icon-preferences-templates.png"] {
+  //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+  content: url("@{baseurl}/ico-brochure.png") !important;
+}
+
+// .btn.btn-toolbar[title="Delete"]
+.btn.btn-toolbar {
+  img[alt="toolbar-compose.png"] {
+    content: url("@{baseurl}/ico-composing-mail.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-archive.png"] {
+    content: url("@{baseurl}/ico-archive.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-spam.png"] {
+    content: url("@{baseurl}/ico-spam.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-not-spam.png"] {
+    content: url("@{baseurl}/ico-spam.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-trash.png"] {
+    content: url("@{baseurl}/ico-trash.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-star.png"] {
+    content: url("@{baseurl}/ico-add-stars.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-star-selected.png"] {
+    content: url("@{baseurl}/ico-off-stars.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-markasunread.png"] {
+    content: url("@{baseurl}/ico-not-read.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-movetofolder.png"] {
+    content: url("@{baseurl}/ico-move-to-folder.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-tag.png"] {
+    content: url("@{baseurl}/ico-add-tag.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="ic-toolbar-native-reminder.png"] {
+    content: url("@{baseurl}/ico-add-reminder.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-snooze.png"] {
+    content: url("@{baseurl}/ico-schedule.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="ic-toolbar-native-share.png"] {
+    content: url("@{baseurl}/ico-share-message.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="toolbar-person-sidebar.png"] {
+    content: url("@{baseurl}/ico-member.png");
+  }
+}
+
+.btn.btn-toolbar {
+  img[alt="windows-menu-icon.png"] {
+    content: url("@{baseurl}/ico-menu.png");
+  }
+}
+
+.footer-reply-area {
+  img {
+    content: url("@{baseurl}/ico-reply.png");
+  }
+}
+
+.thread-list .list-item {
+  .list-column-HoverActions .action.action-snooze {
+    background: url("@{baseurl}/ico-schedule.png") no-repeat;
+  }
+
+  .list-column-HoverActions .action.action-archive {
+    background: url("@{baseurl}/ico-archive.png") no-repeat;
+  }
+
+  .list-column-HoverActions .action.action-trash {
+    background: url("@{baseurl}/ico-trash.png") no-repeat;
+  }
+}
+
+.thread-list .list-item.focused:hover {
+  .list-column-HoverActions .action.action-snooze {
+    background: url("@{baseurl}/ico-schedule.png") no-repeat !important;
+  }
+
+  .list-column-HoverActions .action.action-archive {
+    background: url("@{baseurl}/ico-archive.png") no-repeat !important;
+  }
+
+  .list-column-HoverActions .action.action-trash {
+    background: url("@{baseurl}/ico-trash.png") no-repeat !important;
+  }
+}
+
+.thread-list .list-item.focused:hover .list-column-HoverActions .inner .action {
+  filter: none;
+}
+
+.thread-list .list-item.focused:hover .list-column-HoverActions .inner {
+  background: none;
+}
+
+.thread-list .list-item .list-column-HoverActions .action {
+  display: inline-block;
+  background-size: 100%;
+  zoom: 0.5;
+  width: 81px;
+  height: 51px;
+  margin: 9px 16px 0 16px;
+}
+
+.toolbar-RootSidebar .btn,
+.message-toolbar-items .btn,
+.toolbar-MessageList .btn,
+.toolbar-MessageListSidebar .btn,
+.toolbar-ThreadList .btn,
+.toolbar-menu-control .btn,
+.footer-reply-area {
+  img {
+    zoom: 0.7 !important;
+    -webkit-mask-image: none !important;
+    -webkit-mask-repeat: none !important;
+    mask-image: none !important;
+    mask-repeat: none !important;
+    object-position: 0 !important;
+    background: none !important;
+
+    // New properties to be set for the images.
+    height: 25px;
+    background-size: auto !important;
+  }
+
+}
+
+.signature-button-dropdown .only-item {
+  img:first-child {
+    content: url("@{baseurl}/ico-autograph.png");
+  }
+}
+
+.signature-button-dropdown .only-item {
+  img:first-of-type {
+    zoom: 1 !important;
+    -webkit-mask-image: none !important;
+    -webkit-mask-repeat: none !important;
+    mask-image: none !important;
+    mask-repeat: none !important;
+    object-position: 0 -2px !important;
+    background: none !important;
+
+    // New properties to be set for the images.
+    height: 25px;
+    background-size: auto !important;
+  }
+}
+
+.signature-button-dropdown img.content-mask {
+  display: inherit !important;
+}
