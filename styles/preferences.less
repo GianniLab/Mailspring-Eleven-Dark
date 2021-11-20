@@ -21,16 +21,44 @@
     border-color: @border-color-primary;
 
     .preferences-tabs {
-      padding-top: 0;
+      padding: 10px;
 
       .item {
-        padding-top: 10px;
+        border-radius: @border-radius;
+        padding: 7px 0px;
+        max-width: 90px;
+
+        .tab-icon {
+          zoom: 0.7 !important;
+        }
+
+        .name {
+          padding: 0;
+        }
       }
 
       .item.active {
-        background: @background-dark;
+        background: @background-lighten;
         box-shadow: none;
       }
     }
   }
+
+  .preferences-content {
+    background: @background;
+  }
+
+  .nylas-editable-list .buttons-wrapper,
+  .nylas-editable-list .items-wrapper,
+  .container-accounts .accounts-content .account-details,
+  .container-mail-rules .empty-list {
+    background: @background;
+    border-color: transparent;
+  }
+
+  .container-accounts .accounts-content .account-details,
+  .container-mail-rules .empty-list {
+    border-radius: @border-radius;
+  }
+
 }

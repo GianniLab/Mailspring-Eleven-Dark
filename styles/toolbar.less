@@ -7,8 +7,7 @@
   height: 52px !important;
 
   .sheet-toolbar-container {
-    background: @background-dark  !important;
-    box-shadow: @shadow;
+    background: @background  !important;
     // border-bottom: 2px solid @accent-primary;
   }
 
@@ -25,6 +24,13 @@
     background: inherit !important;
   }
 
+  button.btn.btn-toolbar.item-compose:after {
+    content: 'Write..';
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
+  }
+
   .thread-search-bar {
     text-align: center;
     box-shadow: none;
@@ -32,12 +38,15 @@
     height: 30px;
     margin-top: 0;
     line-height: 2.1;
-    background: @background-primary-accent;
+    background: @background-dark;
     border-radius: @border-radius;
-    border-bottom: 2px solid @accent-blue;
+    border-bottom: 2px solid @border-color;
 
     .suggestions {
-      margin-top: 6px;
+      margin-top: 8px;
+      background: inherit;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
     }
 
     img.clear {
@@ -61,6 +70,11 @@
     height: inherit;
     padding: 10px;
   }
+
+  .thread-search-bar.focused {
+    border-bottom: 2px solid @accent-blue;
+  }
+
 }
 
 .message-toolbar-items {

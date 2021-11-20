@@ -1,105 +1,150 @@
 .column-RootSidebar {
-  background: @background;
-  box-shadow: @shadow;
-  z-index: 1;
-  font-family: @font;
+   // background: @background-dark  !important;
+   z-index: 1;
+   font-family: @font;
+
+   .account-sidebar {
+      background: @background;
+
+      .account-switcher {
+         top: 4px;
+      }
+   }
+
+   .notifications {
+      background: @background;
+   }
 }
 
 .outline-view:first-child {
-  margin-top: 30px;
+   margin-top: 30px;
+}
+
+.account-sidebar-sections section {
+
+   .item-container:hover {
+      background: @background-primary-accent;
+      box-shadow: @shadow-item;
+   }
+
+   .item-container {
+      margin-bottom: 5px;
+      border-radius: @border-radius;
+
+      .item.selected {
+         background: @background-primary-accent  !important;
+         margin-left: -1.4rem;
+         padding-left: 25px;
+         color: @accent-blue;
+         // background: @background-primary-accent;
+         box-shadow: @shadow-item;
+         height: inherit;
+
+         .icon {
+            background: @accent-blue;
+            height: 11px;
+            left: -25px;
+            position: relative;
+            width: 3px;
+            border-radius: 33%;
+            padding: 0;
+         }
+
+         .item-count-box.alt-count,
+         .icon img.content-mask {
+            background: @accent-blue;
+         }
+      }
+
+      .item {
+         border-radius: @border-radius;
+
+         .item-count-box.alt-count,
+         img.content-mask {
+            background-color: @text-color-sidebar;
+            border-radius: 8px;
+            right: 18px;
+            position: absolute;
+
+         }
+
+         img {
+            display: none;
+         }
+
+      }
+   }
 }
 
 .outline-view {
-  padding-left: 10px;
-  background: @background-primary-accent;
-  margin: 10px;
-  border-radius: @border-radius;
+   padding-left: 10px;
+   // background: @background-primary-accent;
+   margin: 10px;
+   border-radius: @border-radius;
 
-  .heading {
-    padding: 5px
-  }
+   .heading {
+      padding: 5px
+   }
 
-  .item,
-  .heading {
-    color: @text-color-sidebar;
-  }
+   .item,
+   .heading {
+      color: @text-color-sidebar;
+   }
 
-  .item.selected {
-    color: @accent-blue;
-    background: inherit;
+   .item-children {
+      padding-left: 0px !important;
 
-    .item-count-box.alt-count,
-    .icon img.content-mask {
-      background: @accent-blue;
-    }
-  }
-
-  .item {
-
-    .item-count-box.alt-count,
-    img.content-mask {
-      background-color: @text-color-sidebar;
-    }
-
-    .icon {
-      display: none;
-    }
-  }
-
-  .item-children {
-    padding-left: 0px !important;
-
-    .icon {
-      display: none;
-    }
-  }
+      .icon {
+         display: none;
+      }
+   }
 
 }
 
 .flexbox-handle-horizontal div {
-  box-shadow: none;
+   box-shadow: none;
 }
 
 .disclosure-triangle div {
-  border-left: 7px solid @text-color-sidebar;
+   border-left: 7px solid @text-color-sidebar;
 }
 
 .disclosure-triangle div {
 
-  border: 0;
-  width: 6px;
-  height: 6px;
-  box-sizing: border-box;
-  transform: rotate(45deg);
+   border: 0;
+   width: 6px;
+   height: 6px;
+   box-sizing: border-box;
+   transform: rotate(45deg);
 
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-width: 0px 2px 2px 0;
-    border-style: solid;
-    border-color: @text-color-sidebar;
-    transition: .2s ease;
-    display: block;
-    transform-origin: 100% 0;
-  }
+   &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border-width: 0px 2px 2px 0;
+      border-style: solid;
+      border-color: @text-color-sidebar;
+      transition: .2s ease;
+      display: block;
+      transform-origin: 100% 0;
+   }
 
 
-  &:after {
-    content: '';
-    float: left;
-    position: relative;
-    top: -100%;
-    width: 100%;
-    height: 100%;
-    border-width: 0px 0px 0px 0px;
-    border-style: solid;
-    border-color: @text-color-sidebar;
-    transform-origin: 100% 0;
-    transition: .2s ease;
-  }
+   &:after {
+      content: '';
+      float: left;
+      position: relative;
+      top: -100%;
+      width: 100%;
+      height: 100%;
+      border-width: 0px 0px 0px 0px;
+      border-style: solid;
+      border-color: @text-color-sidebar;
+      transform-origin: 100% 0;
+      transition: .2s ease;
+   }
 }
 
 .disclosure-triangle.collapsed div {
-  transform: rotate(-45deg);
+   transform: rotate(-45deg);
 }

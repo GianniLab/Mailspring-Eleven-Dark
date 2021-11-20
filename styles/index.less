@@ -37,9 +37,17 @@ body {
 
 .column-ThreadList,
 .column-MessageList,
-.column-MessageListSidebar {
+.column-MessageListSidebar,
+.column-DraftList,
+.activity-dashboard,
+.layout-mode-popout {
   background: @background;
   font-family: @font;
+  padding: 10px;
+
+  .section-divider div {
+    background: @background;
+  }
 }
 
 #sheet-container {
@@ -47,10 +55,10 @@ body {
 }
 
 select {
-  background: @background-primary-accent;
+  background: @background-primary-accent  !important;
   border-radius: @border-radius;
   padding: 5px;
-  border-color: @background-primary-accent;
+  border-color: @background-primary-accent  !important;
   border-bottom: 2px solid @accent-blue;
 }
 
@@ -65,7 +73,7 @@ select {
   border: none;
 
   .scrollbar-handle {
-    background-color: @accent-blue;
+    background-color: @text-color-inverse;
     border-radius: 10px !important;
     border: none;
   }
@@ -87,4 +95,110 @@ body #inbox-html-wrapper {
 
 .heading span:first-child {
   font-weight: 700;
+}
+
+body.platform-win32 {
+  .btn {
+    box-shadow: 0 0 0 1px @text-color;
+    border-radius: @border-radius;
+  }
+
+  .btn:hover {
+    background: @background;
+  }
+
+  .button-dropdown {
+
+    .primary-item:hover,
+    .secondary-picker:hover,
+    .secondary-items:hover {
+      background: @background-lighten  !important;
+    }
+  }
+
+  .btn-send {
+
+    .primary-item {
+      border-top-left-radius: @border-radius;
+      border-bottom-left-radius: @border-radius;
+    }
+
+    .secondary-picker {
+      border-top-right-radius: @border-radius;
+      border-bottom-right-radius: @border-radius;
+    }
+
+    .secondary-items {
+      border-radius: @border-radius;
+      background: @background-primary-accent;
+    }
+  }
+
+  .button-dropdown.open.open-down.secondary-items {
+    box-shadow: none;
+  }
+
+  .button-dropdown .secondary-items .menu .item:hover {
+    background-color: @background-lighten;
+  }
+}
+
+.RichEditor-toolbar .floating-container {
+  border-color: @background-dark;
+}
+
+.composer-inner-wrap .composer-subject:after {
+  background: @background-dark;
+}
+
+.composer-full-window .composer-inner-wrap {
+
+  .composer-action-bar-wrap {
+    background: @background-primary-accent;
+    border-color: @background-dark;
+  }
+}
+
+.menu {
+  border-radius: @border-radius;
+
+  .header-container,
+  .content-container,
+  .footer-container {
+    background: @background-primary-accent  !important;
+    border-color: @background-dark  !important;
+  }
+
+  .item.selected,
+  .item:active {
+    text-decoration: none;
+    background-color: @background-lighten;
+    color: @text-color;
+  }
+}
+
+body.platform-win32 .fixed-popover {
+  border-radius: @border-radius;
+  box-shadow: 0 0 5px @background-dark;
+}
+
+
+.fixed-popover-container {
+  .fixed-popover .menu .content-container {
+    overflow-x: hidden;
+  }
+
+  .fixed-popover-pointer {
+    -webkit-mask-image: url(images/tooltip/tooltip-bg-pointer@2x.png);
+    background-color: @background-primary-accent;
+  }
+
+  .fixed-popover-pointer.shadow {
+    -webkit-mask-image: url(images/tooltip/tooltip-bg-pointer-shadow@2x.png);
+    background-color: @background-dark;
+  }
+}
+
+.RichEditor-toolbar button.with-select select {
+  border: 1px solid @background-dark;
 }

@@ -1,113 +1,145 @@
 .column-ThreadList {
-  padding: 10px;
+	padding: 10px;
 }
 
 .list-container {
 
-  .list-rows {
-    background: none;
-  }
+	.list-rows {
+		background: none;
+	}
 
-  .list-item:hover {
-    background: @background-dark-blur  !important;
-  }
+	.list-item:hover {
+		background: @background-lighten  !important;
+	}
 
-  .list-item.focused {
-    color: inherit;
-    background: @background-lighten;
+	.list-item.focused {
+		color: @accent-primary-unfocus;
+		background: @background-lighten;
 
-    .participants-wrapper {
-
-      color: @accent-primary-unfocus;
-    }
-  }
+		.participants-wrapper {
+			color: @accent-primary-unfocus;
+		}
+	}
 }
 
 body.is-blurred .list-container .list-item.focused {
-  background: @background-primary-unfocus;
+	background: @background-primary-unfocus;
 }
 
 .thread-list .scroll-region {
-  overflow: hidden;
-  z-index: 0;
+	overflow: hidden;
+	z-index: 0;
 }
 
 .thread-list .list-item,
 .draft-list .list-item {
-  background: @background-primary-accent  !important;
-  border-bottom: 1px solid @border-color-primary;
-  padding: 7px 0;
-  max-height: 80px;
-  border-radius: @border-radius;
+	background: @background-primary-accent  !important;
+	border-bottom: 1px solid @border-color-primary;
+	padding: 7px 0;
+	max-height: 80px;
+	border-radius: @border-radius;
 }
 
 .thread-list,
 .draft-list {
-  .unread:not(.focused):not(.selected):not(.next-is-selected) {
-    border-bottom: 1px solid @border-color-primary;
-  }
+	.unread:not(.focused):not(.selected):not(.next-is-selected) {
+		border-bottom: 1px solid @border-color-primary;
+	}
 
-  .thread-icon.thread-icon-unread,
-  .thread-icon.thread-icon-unread {
-    visibility: hidden;
-  }
+	.thread-icon.thread-icon-unread {
+		background-image: none;
+		background: @accent-blue;
+		width: 3px;
+		left: -2px;
+		position: absolute;
+		height: 40px;
+		border-radius: 22%;
+	}
 
-  .focused .thread-icon,
-  .focused .draft-icon,
-  .focused .mail-important-icon {
-    filter: none;
-  }
+	.focused .thread-icon,
+	.focused .draft-icon,
+	.focused .mail-important-icon {
+		filter: none;
+	}
 }
 
 .thread-list-narrow {
+	.icons-column {
+		align-self: center;
+		flex-direction: inherit;
+	}
 
-  .subject,
-  .snippet-and-labels .snippet {
-    font-size: 12.3px;
-    line-height: normal;
-  }
-}
-
-.thread-list-wide {
-  .list-item {
-    margin-bottom: 3px;
-    border-radius: @radius;
-  }
+	.subject,
+	.snippet-and-labels .snippet {
+		font-size: 12.3px;
+		line-height: normal;
+	}
 }
 
 .thread-list-wide .scroll-region {
-  border-radius: @border-radius;
+	border-radius: @border-radius;
 }
 
 .thread-list-wide {
+	.list-item {
+		margin-bottom: 3px;
+		border-radius: @radius;
+	}
 
-  .list-item:hover .list-column-HoverActions {
-    width: auto !important;
-    height: inherit;
-  }
+	.list-item:hover .list-column-HoverActions {
+		width: auto !important;
+		height: inherit;
+	}
 
-  .list-item:hover .list-column-HoverActions .inner {
-    position: inherit;
-    width: inherit;
-    height: inherit;
-    left: inherit;
-  }
+	.list-item:hover .list-column-HoverActions .inner {
+		position: inherit;
+		width: inherit;
+		height: inherit;
+		left: inherit;
+		background-image: none;
+		filter: drop-shadow(2px 2px 3px @background) grayscale(0.2) opacity(.8);
+	}
 
-  .list-column-HoverActions .action {
-    box-shadow: none;
-  }
+	.list-column-HoverActions .action {
+		box-shadow: none;
+		width: 65px !important;
+	}
 
-  // .thread-injected-quick-actions div,
-  // .thread-injected-quick-actions button {
-  //   margin: 0 auto !important;
-  // }
-}
-
-.thread-list.handler-split .list-item.selected {
-  color: inherit;
-  border-left: 4px solid @accent-blue;
+	.thread-icon.thread-icon-unread {
+		height: 15px;
+	}
 }
 
 .list-container .list-item.next-is-selected {
-  border-bottom-color: @border-color-primary;
+	border-bottom-color: @border-color-primary;
+}
+
+.column-DraftList .list-container {
+	padding-left: 8px;
+	padding-right: 8px;
+
+	.list-tabular-item {
+		border-left: 0;
+		border-bottom: 0;
+
+		.list-column-Check .checkmark {
+			padding: 5px 11px;
+			position: absolute;
+			border-left: 3px solid @text-color;
+			height: 26px;
+			left: 0px;
+			top: 6px;
+		}
+
+	}
+
+	.list-tabular-item.selected {
+		color: @text-color;
+
+		.list-column-Check .checkmark {
+			border-left: 3px solid @accent-blue;
+			border-bottom: 0;
+
+		}
+	}
 }
