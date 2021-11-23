@@ -1,7 +1,7 @@
 # Mailspring Eleven Dark Theme - beta
 
 
-Simple Theme for the [Mailspring](http://www.getmailspring.com/) email client.
+A Dark Theme for the [Mailspring](http://www.getmailspring.com/) email client, Windows 11 inspired.
 
 ![Mailspring · Eleven Dark Theme](https://user-images.githubusercontent.com/24461557/124295049-ac583900-db58-11eb-91a8-02f7d58c4610.png)
 ![Mailspring · Eleven Dark Theme -settings](https://user-images.githubusercontent.com/24461557/124294964-99ddff80-db58-11eb-9e61-edcc3d5fd727.png)

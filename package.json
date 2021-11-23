@@ -4,7 +4,7 @@
   "displayName": "Eleven",
   "theme": "ui",
   "version": "0.1.0",
-  "description": "A light theme for Mailspring",
+  "description": "A dark theme for Mailspring Windows 11 inspired",
   "license": "MIT",
   "engines": {
     "mailspring": "*"
