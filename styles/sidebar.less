@@ -31,12 +31,39 @@
       margin-bottom: 5px;
       border-radius: @border-radius;
 
+      .item {
+         border-radius: @border-radius;
+
+         .item-count-box.alt-count,
+         img.content-mask {
+            background-color: @text-color-sidebar;
+            border-radius: 8px;
+            right: 18px;
+            position: absolute;
+
+         }
+
+         .item-count-box:not(.alt-count) {
+            border-radius: 10px;
+            box-shadow: none;
+            border: 1px solid @text-color-very-subtle;
+            line-height: normal;
+            padding-right: 3.8px;
+         }
+
+         img {
+            display: none;
+         }
+
+      }
+   }
+
+   .item-children {
       .item.selected {
          background: @background-primary-accent  !important;
-         margin-left: -1.4rem;
-         padding-left: 25px;
+         margin-left: -20px;
+         padding-left: 8px;
          color: @accent-blue;
-         // background: @background-primary-accent;
          box-shadow: @shadow-item;
          height: inherit;
 
@@ -57,28 +84,13 @@
       }
 
       .item {
-         border-radius: @border-radius;
-
-         .item-count-box.alt-count,
-         img.content-mask {
-            background-color: @text-color-sidebar;
-            border-radius: 8px;
-            right: 18px;
-            position: absolute;
-
-         }
-
-         img {
-            display: none;
-         }
-
+         margin-left: -11px;
       }
    }
 }
 
 .outline-view {
    padding-left: 10px;
-   // background: @background-primary-accent;
    margin: 10px;
    border-radius: @border-radius;
 
@@ -92,11 +104,16 @@
    }
 
    .item-children {
-      padding-left: 0px !important;
+      // padding-left: 0px !important;
+      margin-left: 9px;
 
       .icon {
          display: none;
       }
+   }
+
+   .item.selected {
+      background: initial;
    }
 
 }
@@ -107,10 +124,6 @@
 
 .disclosure-triangle div {
    border-left: 7px solid @text-color-sidebar;
-}
-
-.disclosure-triangle div {
-
    border: 0;
    width: 6px;
    height: 6px;
@@ -128,7 +141,6 @@
       display: block;
       transform-origin: 100% 0;
    }
-
 
    &:after {
       content: '';

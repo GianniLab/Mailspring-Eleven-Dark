@@ -2,6 +2,10 @@
   padding: 10px;
 }
 
+.column-ThreadList div {
+  border-top: none !important;
+}
+
 #message-list {
   overflow: hidden;
   background: inherit;
@@ -56,13 +60,17 @@
   }
 
   .header-toggle-control {
-    left: -3px;
+    left: -8px !important;
+    filter: brightness(4);
+    backface-visibility: hidden;
   }
 
   .footer-reply-area-wrap {
     background: @background-dark;
     border: none;
     margin: 0;
+    border-bottom-left-radius: @border-radius;
+    border-bottom-right-radius: @border-radius;
 
     img.content-mask {
       float: right;
@@ -94,14 +102,11 @@
 
   .primary-item {
     box-shadow: none !important;
-    // border: 1px solid @border-color-primary;
     left: 0 !important;
   }
 
   .secondary-picker {
     box-shadow: none !important;
-    // border: 1px solid @border-color-primary;
-    // border-left: 0 !important;
     right: 0 !important;
   }
 }

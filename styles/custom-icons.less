@@ -1,4 +1,4 @@
-@baseurl: "../../../../../../Roaming/Mailspring/packages/11-light/img";
+@baseurl: "../../../../../../Roaming/Mailspring/packages/eleven-dark/img";
 
 // @baseurl: "~/Library/Application Support/Mailspring/packages/11/img";
 
@@ -57,6 +57,40 @@ img[ alt="icon-preferences-signatures.png"] {
 img[ alt="icon-preferences-templates.png"] {
   //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
   content: url("@{baseurl}/ico-brochure.png") !important;
+}
+
+// img[ class="opened content-mask"] {
+//   //-webkit-mask-image: url("@{iconurl}16-sent.svg"),
+//   content: url("@{baseurl}/icon-tracking-opened.png") !important;
+// }
+
+.mail-important-icon {
+  padding: 2px !important;
+  width: 19px;
+  height: 19px;
+  margin-left: 0;
+  background-image: url("@{baseurl}/important.svg");
+}
+
+.mail-important-icon.enabled:hover {
+  background-image: url("@{baseurl}/important-hover.svg") !important;
+}
+
+.mail-important-icon.enabled.active {
+  background-image: url("@{baseurl}/important.svg");
+  background-size: 19px;
+  // padding: 2px;
+  // width: 19px;
+  // height: 19px;
+}
+
+.thread-list .list-item:hover .mail-important-icon.enabled {
+  background-image: url("@{baseurl}/important-hover-inactive.svg");
+  visibility: inherit;
+}
+
+.layout-mode-list .mail-important-icon {
+  margin-left: 4px;
 }
 
 // .btn.btn-toolbar[title="Delete"]
@@ -188,6 +222,7 @@ img[ alt="icon-preferences-templates.png"] {
   filter: none;
 }
 
+.thread-list .list-item.selected:hover .list-column-HoverActions .inner,
 .thread-list .list-item.focused:hover .list-column-HoverActions .inner {
   background: none;
 }
