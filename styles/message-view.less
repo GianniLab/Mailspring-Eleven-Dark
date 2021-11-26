@@ -34,6 +34,21 @@
     padding-bottom: 0;
     border-top: 1px solid;
     border-color: inherit;
+
+    .quoted-text-control {
+      margin-top: 10px;
+      box-shadow: none;
+
+      .dots::after {
+        content: ' show trimmed content';
+      }
+    }
+
+    .quoted-text-control:hover {
+      background: transparent;
+      color: @text-color-sidebar;
+    }
+
   }
 
   .message-item-wrap .message-item-white-wrap {
